@@ -46,7 +46,9 @@ router.post('/upload-profile', userProtectedRoute, upload.single('image'), async
     res.status(500).json({ error: 'Failed to upload profile picture.' })
   }
 })
-
+router.get('/check',(req,res)=>{
+  res.send("this backend works properly👍👍👍")
+})
 router.get('/get-profile', userProtectedRoute, getUserProfile)
 
 export default router
